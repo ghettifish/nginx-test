@@ -1,0 +1,10 @@
+web:
+  image: nginx
+  volumes:
+    - ./templates:/etc/nginx/templates
+    - ./cache:/data/nginx/cache
+  ports:
+    - "8080:80"
+  environment:
+    - NGINX_HOST=wp.wildatheart.org
+    - NGINX_PORT=80
